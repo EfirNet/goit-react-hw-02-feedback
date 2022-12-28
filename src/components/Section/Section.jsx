@@ -1,11 +1,26 @@
 import PropTypes from 'prop-types';
-import css from './Section.module.css';
+import styled from 'styled-components';
 
-const Section = ({ title, children }) => (
-  <section className={css.section}>
-    <h2 className={css.title}>{title}</h2>
+const Wrap = styled.section`
+  height: 150px;
+ text-align: center;
+`;
+
+const Title = styled.h2`
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: rgb(248, 3, 118);
+  text-shadow:1px 0 1px #ffffff6f;
+`;
+
+export const Section = ({ title, children }) => (
+  <Wrap>
+    <Title>{title}</Title>
     {children}
-  </section>
+  </Wrap>
 );
 
 Section.propTypes = {
@@ -13,4 +28,3 @@ Section.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Section;
