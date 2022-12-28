@@ -17,6 +17,7 @@ cursor: pointer;
 text-Shadow: 1px 0 1px #ffffff6f;
 transform: scale(1.1);
 letter-spacing: 2px;
+transition: transform 250ms;
 &:hover {
   transform: scale(0.9);
   font-weight: normal;
@@ -25,6 +26,7 @@ letter-spacing: 2px;
 background-color: rgb(255, 255, 255);
 border: 1px solid rgb(248, 3, 118);
 letter-spacing: 0;
+transition: transform 500ms;
 }
 &:not(:last-child) {
   margin-right: 15px;
